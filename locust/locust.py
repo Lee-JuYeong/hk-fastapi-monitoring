@@ -1,6 +1,7 @@
-from locust import HttpUser, task
+from locust.locust import HttpUser, task
 import pandas as pd
 import random
+
 
 feature_columns = {
     "fixed acidity": "fixed_acidity",
