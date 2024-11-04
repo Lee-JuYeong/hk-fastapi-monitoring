@@ -15,6 +15,7 @@ feature_columns = {
     "sulphates": "sulphates",
     "alcohol": "alcohol_pct_vol",
 }
+
 dataset = (
     pd.read_csv(
         "winequality-red.csv",
@@ -41,4 +42,3 @@ class WinePredictionUser(HttpUser):
         corrupt_key = random.choice(list(record.keys()))
         record[corrupt_key] = "bad data"
         self.client.post("/predict", json=record)
-        
