@@ -12,3 +12,7 @@ scrape_configs:
   - targets:
     - hk-fastapi-monitoring  # metrics from model
     #컨테이너화 시킬거라 url이 아니라 컨테이너명이 들어가야함
+- job_name: "jenkins"
+  metrics)path: /prometheus/
+    - targets:
+      - http://ec2-15-152-132-74.ap-northeast-3.compute.amazonaws.com:8080/
